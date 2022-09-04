@@ -1,0 +1,42 @@
+<div id="editUser">
+    <div id="title" mat-dialog-title fxLayout fxLayoutAlign="space-between center">  
+        <div>Edit Usre</div>
+        <mat-icon fontIcon="close" [mat-dialog-close]="" ></mat-icon>
+        
+
+    </div>
+    
+    <div mat-dialog-content> 
+
+        <form fxLayout="column" [formGroup]="editForm" novalidate>
+            <mat-form-field appearance="outline">
+                <mat-label>Name</mat-label>
+                <input matInput placeholder="Name" formControlName="name">
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Email</mat-label>
+                <input matInput type="email" placeholder="Email address" formControlName="email">
+            </mat-form-field>  
+            <mat-radio-group formControlName="gender" fxLayout fxLayoutGap="16px">
+                <div>Gender</div>
+                <mat-radio-button value="male">Male</mat-radio-button >
+                <mat-radio-button value="female">Female</mat-radio-button>
+            </mat-radio-group>
+            <mat-form-field appearance="outline">
+                <mat-label>Date of Birth</mat-label>
+                <input matInput [matDatepicker]="picker" formControlName="date">
+                <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+                <mat-datepicker #picker></mat-datepicker>
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Address</mat-label>
+                <textarea matInput formControlName="address"></textarea>
+            </mat-form-field>
+            
+        </form>
+
+    </div>
+    <div mat-dialog-actions fxLayout fxLayoutAlign="end center">
+        <button mat-raised-button [mat-dialog-close]="true" [disabled]="editForm.invalid" (click)="updateData()">Submit</button>
+    </div>
+</div>

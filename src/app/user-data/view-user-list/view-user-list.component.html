@@ -1,0 +1,100 @@
+<div id="viewList">
+
+    <!-- header containt -->
+    <div id="header" fxLayout fxLayoutAlign="space-between center">
+        <div fxLayout fxLayoutGap='20px'>
+            <div>
+                <mat-icon fontIcon="menu"></mat-icon>
+            </div>
+            <div class="basicColor">Users</div>
+        </div>
+
+        <div fxLayout fxLayoutGap='20px'>
+            <div><img
+                    src="https://1.bp.blogspot.com/-GuHrQvUFs7Q/WKsUsV1iQNI/AAAAAAAAByo/lac6Bfaa8ic5cqri7A_BYJphJyQNuL2pACK4B/s1600/Genelia%2BD%2527Souza%2Bprofile%2Bfamily%252C%2Bwiki%2BAge%252C%2BAffairs%252C%2BBiodata%252C%2BHeight%252C%2BWeight%252C%2BHusband%252C%2BBiography%2Bgo%2Bprofile1.jpg"
+                    alt="profile"></div>
+            <div class="testEffect">Swanika</div>
+        </div>
+
+    </div>
+
+    <!-- main containt -->
+    <div id="containt" fxLayout fxLayoutAlign="start start">
+
+        <!-- left containt -->
+
+        <div id="leftContaint" fxFlex="80">
+            <h1>USER LIST</h1>
+
+            <div id="userList">
+                <table>
+                    <thead>
+                        <tr>
+                            <th>
+                                <mat-checkbox (change)="toggleSelectAll($event)" [(ngModel)]="selectAll"></mat-checkbox>
+                            </th>
+                            <th>Name</th>
+                            <th>Email</th>
+                            <th>Gender</th>
+                            <th>Address</th>
+                            <th>Date Of Birth</th>
+                            <th></th>
+                        </tr>
+
+                    </thead>
+
+                    <tbody>
+                        <tr *ngFor="let list of userList">
+                            <td>
+                                <mat-checkbox [(ngModel)]="list.selected"></mat-checkbox>
+                            </td>
+                            <td>{{list.name}}</td>
+                            <td>{{list.email}}</td>
+                            <td>{{list.gender}}</td>
+                            <td>{{list.address}}</td>
+                            <td>{{list.date | date: 'dd/MM/yyyy'}}</td>
+                            <td>
+                                <div fxLayout="row">
+                                    <mat-icon (click)="editUser(list)" class="spaceAlign" fontIcon="edit"></mat-icon>
+
+                                    <mat-icon (click)="deleteUser(list)" fontIcon="delete"></mat-icon>
+                                </div>
+
+                            </td>
+                        </tr>
+                    </tbody>
+                </table>
+
+                <div class="table-footer">
+                    <mat-paginator [length]="userList.length" [pageSize]="10" [pageSizeOptions]="[5, 10, 25, 100]"
+                        aria-label="Select page">
+                    </mat-paginator>
+                </div>
+
+            </div>
+
+            <!-- right containt -->
+        </div>
+        <div id="rightContaint" fxFlex>
+            <h1>Progress</h1>
+            <div>
+                <div class="">
+
+                    <mat-progress-bar class="bgColor" [value]=getPercent()></mat-progress-bar>
+
+                    <div class="paddingTop">
+                        <div fxLayout class="paddingB">
+                            <div fxFlex="100px">Male User :</div>
+                            <div fxFlex>{{ genderConunt.male }}</div>
+
+                        </div>
+                        <div fxLayout>
+                            <div fxFlex="100px">Female User :</div>
+                            <div fxFlex>{{ genderConunt.female }}</div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>

@@ -1,0 +1,20 @@
+#editUser{
+    width: 400px;
+
+    #title {
+        border-bottom: 2px solid whitesmoke;
+        padding-bottom: 16px;
+
+        mat-icon:hover{
+            cursor: pointer;
+        }
+
+    }
+
+    button{
+        background-color: #00a99d;
+        border-radius: 50px;
+    }
+
+
+}

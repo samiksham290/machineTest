@@ -1,0 +1,60 @@
+{
+  "user": [
+    {
+      "name": "Sameer",
+      "email": "sameer@gmil.com",
+      "gender": "male",
+      "date": "2010-05-08T18:30:00.000Z",
+      "address": "Mumbai",
+      "id": 2
+    },
+    {
+      "name": "Shital Meshram",
+      "email": "shital@gmil.com",
+      "gender": "female",
+      "date": "1992-02-11T18:30:00.000Z",
+      "address": "Akola",
+      "id": 4
+    },
+    {
+      "name": "Shrawni",
+      "email": "shrwu@gmil.com",
+      "gender": "female",
+      "date": "2020-07-14T18:30:00.000Z",
+      "address": "Nagpur",
+      "id": 6
+    },
+    {
+      "name": "praful Meshram",
+      "email": "praful@gmil.com",
+      "gender": "male",
+      "date": "1990-09-05T18:30:00.000Z",
+      "address": "Banglore",
+      "id": 7
+    },
+    {
+      "name": "Karan Meshram",
+      "email": "krn@gmil.com",
+      "gender": "male",
+      "date": "2022-10-02T18:30:00.000Z",
+      "address": "Amravti",
+      "id": 8
+    },
+    {
+      "name": "Swanika Meshram",
+      "email": "swani@gmil.com",
+      "gender": "female",
+      "date": "2022-08-11T18:30:00.000Z",
+      "address": "USA",
+      "id": 10
+    },
+    {
+      "name": "Prerna Borkar",
+      "email": "peru@gmil.com",
+      "gender": "female",
+      "date": "2000-01-05T18:30:00.000Z",
+      "address": "Pune",
+      "id": 11
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+#deleteUser{
+    width: 400px;
+
+    #title {
+        border-bottom: 2px solid whitesmoke;
+        padding-bottom: 16px;
+
+        mat-icon:hover{
+            cursor: pointer;
+        }
+    }
+    
+    .bottomLayout{
+        margin-bottom: 20px;
+
+    }
+   
+    button{
+        border-radius: 50px;
+    }
+
+    button:hover{
+        background-color: #00a99d;
+        border-radius: 50px;
+    }
+}

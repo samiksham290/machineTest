@@ -1,0 +1,16 @@
+<div id="deleteUser">
+    <div id="title" mat-dialog-title fxLayout fxLayoutAlign="space-between center"> 
+       <div>Delete User </div>
+       <mat-icon fontIcon="close" [mat-dialog-close]=""></mat-icon>
+
+    </div>
+    <div mat-dialog-content class="bottomLayout">
+        <div>Are you sure you want to delete {{data.name}}?</div>
+    </div>
+    <div mat-dialog-actions fxLayout fxLayoutAlign="end center">
+        <button mat-raised-button [mat-dialog-close]="false">No</button>
+        <button mat-raised-button [mat-dialog-close]="true">Yes</button>
+
+    </div>
+
+</div>
